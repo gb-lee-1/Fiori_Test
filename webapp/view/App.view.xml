@@ -1,0 +1,14 @@
+<mvc:View controllerName="sync.cl3.test.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <HBox>
+        <Button text="1번" press="onPress('1')" type="{= ${appModel>/page} === 1 ? 'Success' : 'Accept'}" class="sapUiTinyMarginBeginEnd"/>
+        <Button text="2번" press="onPress('2')" type="{= ${appModel>/page} === 2 ? 'Success' : 'Accept'}" class="sapUiTinyMarginEnd"/>
+        <Button text="3번" press="onPress('3')" type="{= ${appModel>/page} === 3 ? 'Success' : 'Accept'}" class="sapUiTinyMarginEnd"/>
+        <Button text="4번" press="onPress('4')" type="{= ${appModel>/page} === 4 ? 'Success' : 'Accept'}" class="sapUiTinyMarginEnd"/>
+        <Button text="추가문제" press="onPress('5')" type="{= ${appModel>/page} === 5 ? 'Success' : 'Accept'}" class="sapUiTinyMarginEnd"/>
+    </HBox>
+    <App id="app">
+    </App>
+</mvc:View>

@@ -1,0 +1,51 @@
+<mvc:View controllerName="sync.cl3.test.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:ui="sap.ui.table">
+    <Page id="page" title="문제 3번 - UI TABLE 사용">
+        <content>
+
+            <ui:Table rows="{table>/products}" id="table">
+                <ui:extension>
+                    <OverflowToolbar >
+                        <ToolbarSpacer/>
+                        <SearchField width="30%" search="onSearch"/>
+                    </OverflowToolbar>
+                </ui:extension>
+                <ui:columns>
+                    <ui:Column hAlign="Center">
+                        <Label text="품목코드"/>
+                        <ui:template>
+                            <Text text="{table>code}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column>
+                        <Label text="품목명"/>
+                        <ui:template>
+                            <Text text="{table>name}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column>
+                        <Label text="분류"/>
+                        <ui:template>
+                            <Text text="{table>type}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="End">
+                        <Label text="잔여수량"/>
+                        <ui:template>
+                            <Text text="{table>stock}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column>
+                        <Label text="창고"/>
+                        <ui:template>
+                            <Text text="{table>warehouse}"/>
+                        </ui:template>
+                    </ui:Column>
+                </ui:columns>
+            </ui:Table>
+
+        </content>
+    </Page>
+</mvc:View>

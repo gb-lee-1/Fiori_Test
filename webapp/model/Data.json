@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "code" : "P001",
+            "name": "라면",
+            "type": "인스턴스",
+            "stock": 200,
+            "warehouse": "오산"
+        },
+        {
+            "code" : "P002",
+            "name": "소주",
+            "type": "주류",
+            "stock": 10,
+            "warehouse": "곤지암"
+        },
+        {
+            "code" : "P003",
+            "name": "휴지",
+            "type": "생필품",
+            "stock": 300,
+            "warehouse": "서울동부"
+        },
+        {
+            "code" : "P004",
+            "name": "과자",
+            "type": "간식",
+            "stock": 50,
+            "warehouse": "부산"
+        }
+    ]
+}

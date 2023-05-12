@@ -1,0 +1,31 @@
+<mvc:View controllerName="sync.cl3.test.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="page" title="문제 1번">
+        <content>
+            
+            <f:SimpleForm title="계산기" >
+                <f:content>
+                    <Label text="첫번째 숫자"/>
+                    <Input value="{path: 'calc>/field1', type: 'sap.ui.model.type.Integer'}"
+                        liveChange="onLiveChange" valueLiveUpdate="true"/>
+                    <Label text="연산기호"/>
+                    <ComboBox selectionChange="onLiveChange" selectedKey="{calc>/operator}" items="{calc>/opList}">
+                        <items>
+                            <core:Item key="{calc>operator}" text="{calc>value}"/>
+                        </items>
+                    </ComboBox>
+                    <Label text="두번째 숫자"/>
+                    <Input value="{calc>/field2}" liveChange="onLiveChange"/>
+                    <Label text=""/>
+                    <Button id="button1" text="계산" type="Success" press="onCalc"/>
+                    <Label text="결과"/>
+                    <Input value="{calc>/result}" editable="false"/>
+                </f:content>
+            </f:SimpleForm>
+            
+        </content>
+    </Page>
+</mvc:View>

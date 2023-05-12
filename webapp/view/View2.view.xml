@@ -1,0 +1,51 @@
+<mvc:View controllerName="sync.cl3.test.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="문제 2번 - 테이블 구성">
+        <content>
+            
+            <Table
+                id="table"
+                noDataText="테이블에 JSON 데이터 추가!"
+                items="{table>/products}">
+                <headerToolbar>
+                    <Toolbar >
+                        <ToolbarSpacer/>
+                        <SearchField width="30%" search="onSearch"/>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column hAlign="Center">
+                        <Label text="품목코드"/>
+                    </Column>
+                    <Column >
+                        <Label text="품목명"/>
+                    </Column>
+                    <Column >
+                        <Label text="분류"/>
+                    </Column>
+                    <Column hAlign="End">
+                        <Label text="잔여수량"/>
+                    </Column>
+                    <Column >
+                        <Label text="창고"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{table>code}"/>
+                            <Text text="{table>name}"/>
+                            <Text text="{table>type}"/>
+                            <ObjectNumber number="{table>stock}"
+                                state="{= 50 > ${table>stock}
+                                            ? 'Error' : ( 100 > ${table>stock} ? 'Warning' : 'Success') }"/>
+                            <Text text="{table>warehouse}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+        </content>
+    </Page>
+</mvc:View>

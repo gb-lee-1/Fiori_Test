@@ -1,0 +1,30 @@
+<mvc:View controllerName="sync.cl3.test.controller.View4"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="OData 서비스 요청">
+        <content>
+            <FeedInput
+                id="feedInput"
+                post="onPost"
+                value=""
+                icon="./images/images.png"
+                class="sapUiSmallMarginTopBottom" />
+            <List
+                showSeparators="Inner"
+                mode="Delete"
+                delete="onDelete"
+                items="{/CommentSet}"
+                >
+                <FeedListItem
+                    sender="{Username}"
+                    icon="./images/face.jpeg"
+                    senderPress="onSenderPress"
+                    iconDensityAware="false"
+                    info="{Indexno}"
+                    timestamp="{path: 'Createtime', type:'sap.ui.model.type.Date'}"
+                    text="{Comments}"
+                    convertLinksToAnchorTags="All"/>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
